@@ -51,7 +51,9 @@ var employees = [
 */
 
 //Code Here
-
+function employeeUpdater(){ 
+  
+}
 
 
 ////////// PROBLEM 2 //////////
@@ -159,4 +161,11 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 
 //Code Here
 
-
+function looper(){
+  numsArr.forEach(arr => {
+    arr.forEach((num, index) => {
+      arr[index] = num % 2 === 1 ? 'odd' : 'even'
+    })
+  })
+  return numsArr
+}

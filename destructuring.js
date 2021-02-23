@@ -22,20 +22,30 @@ var carDetails = {
 */
 
 //Code Here
+// const {color} = carDetails;
 
+// const {make} = carDetails;
+
+// const {model} = carDetails;
+
+// const {year} = carDetails; 
+
+const {color, make, model, year} = carDetails;
 
 
 ////////// PROBLEM 2 //////////
 
 /*
-  In the function below named greeting, it is receiving an object as a parameter. 
+  In the function below named greeting, it is receiving an object as a parameter.  i can't see this object and thats okay
   Use object destructuring to save the object properties to new variables. 
   The property names are firstName, lastName, and title.
 */
 
-function greeting( obj ) {
+function greeting(obj) {
   //Code Here
+  const {firstName, lastName, title} = obj;
   
+
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
@@ -53,8 +63,15 @@ function greeting( obj ) {
   Sum up the values and return the total number.
 */
 
-//Code Here
+// //Code Here
 
+
+function totalPopulation (obj){
+  const {utah, california, texas, arizona} = obj;
+
+  let totalPopulation = utah + california + texas + arizona;
+  return totalPopulation
+}
 
 
 ////////// PROBLEM 4 //////////
@@ -69,7 +86,15 @@ function greeting( obj ) {
 
 //Code Here
 
+function ingredients (obj){
+  let newArr = []
+  
+  const {carb, fat, protein} = obj;
 
+  newArr.push(carb, fat, protein);
+
+  return newArr;
+}
 
 ////////// PROBLEM 5 //////////
 
@@ -87,6 +112,15 @@ function greeting( obj ) {
 
 //Code Here
 
+function largeNumbers ({first, second, third}) {
+  if (first < second && first < third){
+  return first;
+} else if (second < first && second < third) {
+  return second;
+} else {
+  return third;
+}
+}
 
 
 ////////// PROBLEM 6 //////////
@@ -99,4 +133,12 @@ function greeting( obj ) {
 
 //Code Here
 
-
+function numberGroups ({a, b, c}){
+  if (a.length > b.length && a.length > c.length) {
+    return a;
+  } else if (b.length > a.length && b.length > c.length) {
+    return b;
+  } else {
+    return c;
+  }
+}
