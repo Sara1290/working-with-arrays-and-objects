@@ -138,9 +138,8 @@ function secrets(obj){
 //Code Here
 
 function removePassword(obj){
-  for(let key in obj) {
-  delete obj[password]
-}
+  delete obj['password']
+  return obj
 }
 
 ////////// PROBLEM 6 //////////
